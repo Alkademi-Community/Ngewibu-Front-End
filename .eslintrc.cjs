@@ -62,8 +62,6 @@ module.exports = {
     semi: "off",
     quotes: ["error", "double", { allowTemplateLiterals: true }],
     "vue/require-explicit-emits": "off",
-    "vue/multi-word-component-names": "off",
-    "vue/v-on-event-hyphenation": "off",
-    "vue/attribute-hyphenation": "off"
+    "vue/multi-word-component-names": "off"
   }
 }
