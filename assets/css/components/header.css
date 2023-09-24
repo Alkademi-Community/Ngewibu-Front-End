@@ -1,0 +1,41 @@
+.header__container {
+  @apply container bg-white shadow-[0_4px_4px_rgba(0,0,0,0.25)] rounded-b-xl;
+
+  .header__wrapper {
+    @apply flex justify-between items-center py-3;
+
+    .header__brand {
+      @apply font-carterOne text-2xl;
+
+      &--blue {
+        @apply text-primary;
+      }
+    }
+
+    .header__navigation {
+      @apply flex gap-7;
+
+      .action__button {
+        @apply font-medium text-lg;
+
+        &--icon {
+          @apply flex items-center gap-2.5;
+        }
+
+        &--border {
+          @apply rounded-full border-2 border-secondary px-8 py-2;
+        }
+      }
+
+      .dropdown__menu {
+        &--item {
+          @apply absolute top-20 right-0 bg-white py-4 px-6 rounded-xl shadow-[0_0_4px_0_rgba(0,0,0,0.25)];
+
+          .dropdown__item {
+            @apply flex justify-between w-44 text-lg font-medium items-center mb-2;
+          }
+        }
+      }
+    }
+  }
+}
