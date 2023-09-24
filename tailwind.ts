@@ -2,8 +2,36 @@ import type { Config } from "tailwindcss"
 
 export default <Partial<Config>>{
   theme: {
-    container: {},
-    extend: {},
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "3rem"
+      }
+    },
+    fontFamily: {
+      sans: ["Poppins", "sans-serif"],
+      heading: ["Catamaran"],
+      carterOne: ["Carter One"],
+      outfit: ["Outfit"]
+    },
+    extend: {
+      colors: {
+        primary: "#87CEEB",
+        secondary: "#70ACC4",
+        black: "#333333",
+        white: {
+          DEFAULT: "#F9F9F9",
+          soft: "#F7F7F7"
+        },
+        gray: {
+          soft: "#F3F3F3",
+          dark: "#C9C9C9",
+          light: "#D3D3D3"
+        }
+      }
+    },
     plugins: []
   }
 }
