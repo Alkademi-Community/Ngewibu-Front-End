@@ -2,6 +2,8 @@
 
 <template>
   <div class="container py-4">
-    <CardsEvent class-name="w-1/2" size="md" is-read-more />
+    <!-- <CardsEvent class-name="w-1/2" size="md" is-read-more /> -->
+
+    <CardsEventVariant class-name="w-1/2" />
   </div>
 </template>
