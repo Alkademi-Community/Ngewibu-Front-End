@@ -9,6 +9,6 @@
 
 @layer base {
   html {
-    @apply text-black;
+    @apply text-black bg-gray-soft;
   }
 }

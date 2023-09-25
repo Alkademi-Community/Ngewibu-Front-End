@@ -30,6 +30,9 @@ export default <Partial<Config>>{
           dark: "#C9C9C9",
           light: "#D3D3D3"
         }
+      },
+      boxShadow: {
+        small: "0 0 4px 0 rgba(0, 0, 0, .25)"
       }
     },
     plugins: []
