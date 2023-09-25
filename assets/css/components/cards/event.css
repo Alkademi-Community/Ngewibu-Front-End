@@ -1,0 +1,28 @@
+.event__card__container {
+  @apply bg-white flex gap-6 rounded-xl shadow-small;
+  .card__content {
+    @apply flex-1;
+    .card__title {
+      @apply font-heading font-medium mb-2.5;
+    }
+    .card__description {
+      @apply text-sm font-light;
+    }
+    .action__button {
+      @apply border-2 border-primary px-8 py-1.5 font-heading rounded-3xl text-primary mt-3 font-medium
+      hover:bg-primary hover:text-white transition-all duration-300 ease-in-out;
+    }
+  }
+  .card__image {
+    @apply rounded-lg overflow-hidden w-60 h-40;
+    &--square {
+      @apply w-32 h-32;
+    }
+    &--size {
+      @apply w-full object-cover;
+      &--square {
+        @apply aspect-square;
+      }
+    }
+  }
+}
