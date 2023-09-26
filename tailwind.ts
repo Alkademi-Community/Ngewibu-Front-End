@@ -36,5 +36,10 @@ export default <Partial<Config>>{
       }
     },
     plugins: []
-  }
+  },
+  safelist: [
+    "font-heading",
+    "font-carterOne",
+    "font-outfit",
+  ]
 }

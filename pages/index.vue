@@ -5,5 +5,7 @@
     <!-- <CardsEvent class-name="w-1/2" size="md" is-read-more /> -->
 
     <CardsEventVariant class-name="w-1/2" />
+
+    <MicroButton />
   </div>
 </template>
