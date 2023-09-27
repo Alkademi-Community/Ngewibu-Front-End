@@ -8,6 +8,16 @@
 @tailwind utilities;
 
 @layer base {
+  ::-webkit-scrollbar {
+    @apply w-[.3vw];
+  }
+  ::-webkit-scrollbar-track {
+    @apply rounded-md bg-primary/20;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/40 rounded hover:bg-primary;
+  }
+
   html {
     @apply text-black bg-gray-soft;
   }

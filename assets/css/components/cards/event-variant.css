@@ -1,5 +1,5 @@
 .event__variant__wrapper {
-  @apply relative select-none cursor-pointer w-72 h-80 rounded-xl overflow-hidden;
+  @apply relative select-none cursor-pointer w-[calc(50%_-_14px)] h-96 rounded-xl overflow-hidden;
   .card__image {
     &__container {
       @apply overflow-hidden w-full h-full rounded-xl;

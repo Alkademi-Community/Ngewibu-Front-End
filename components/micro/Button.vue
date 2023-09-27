@@ -6,7 +6,7 @@ type ColorType = "primary" | "secondary" | "gray" | "danger" | "warning" | "info
 const props = defineProps({
   className: {
     type: String,
-    default: "w-full",
+    default: "w-full"
   },
   title: {
     type: String,
@@ -14,7 +14,7 @@ const props = defineProps({
   },
   font: {
     type: String as PropType<"sans" | "heading" | "outfit" | "carterOne">,
-    default: "sans",
+    default: "sans"
   },
   color: {
     type: String as PropType<ColorType>,
@@ -22,12 +22,12 @@ const props = defineProps({
   },
   buttonType: {
     type: String as PropType<"button" | "submit" | "reset">,
-    default: "button",
+    default: "button"
   },
   size: {
     type: String as PropType<"sm" | "md" | "lg">,
-    default: "sm",
-  },
+    default: "sm"
+  }
 })
 
 const renderedFont = computed(() => `font-${props.font}`)
@@ -39,12 +39,12 @@ const colors = {
   info: "",
   light: "",
   dark: "",
-  warning: "",
+  warning: ""
 }
 const sizes = {
   sm: "py-1.5 font-medium",
   md: "py-3 text-lg font-medium",
-  lg: "",
+  lg: ""
 }
 defineEmits(["onClick"])
 </script>
@@ -52,12 +52,7 @@ defineEmits(["onClick"])
 <template>
   <button
     :type="buttonType"
-    :class="[,
-      renderedFont,
-      sizes[size] ?? null,
-      colors[color] ?? null,
-      className,
-    ]"
+    :class="[, renderedFont, sizes[size] ?? null, colors[color] ?? null, className]"
     @click="$emit('onClick')"
   >
     {{ title }}

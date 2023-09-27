@@ -49,14 +49,7 @@ const onMenuClick = async(value: DropdownMenu) => {
             />
           </HeadlessPopoverButton>
 
-          <Transition
-            enter-active-class="transition duration-200 ease-out"
-            enter-from-class="translate-y-1 opacity-0"
-            enter-to-class="translate-y-0 opacity-100"
-            leave-active-class="transition duration-150 ease-in"
-            leave-from-class="translate-y-0 opacity-100"
-            leave-to-class="translate-y-1 opacity-0"
-          >
+          <TransitionBottomFade>
             <HeadlessPopoverPanel class="dropdown__menu--item">
               <button
                 v-for="(menu, idx) of dropdownMenu"
@@ -69,7 +62,7 @@ const onMenuClick = async(value: DropdownMenu) => {
                 <Icon :name="menu.icon" class="text-2xl" />
               </button>
             </HeadlessPopoverPanel>
-          </Transition>
+          </TransitionBottomFade>
         </HeadlessPopover>
       </nav>
     </section>
