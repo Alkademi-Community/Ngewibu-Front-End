@@ -1,0 +1,13 @@
+.search__wrapper {
+  @apply relative block;
+
+  .search__icon {
+    @apply bg-primary absolute top-1 left-1 w-9 h-9
+    flex items-center justify-center rounded-full
+    text-xl text-white cursor-pointer select-none;
+  }
+  .search__input {
+    @apply w-full py-2 ps-14 pe-6 outline-none text-lg
+    rounded-3xl shadow-small placeholder:text-gray-light;
+  }
+}

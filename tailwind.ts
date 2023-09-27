@@ -4,6 +4,9 @@ export default <Partial<Config>>{
   theme: {
     container: {
       center: true,
+      screens: {
+        xl: "1200px"
+      },
       padding: {
         DEFAULT: "1rem",
         sm: "2rem",
@@ -36,5 +39,6 @@ export default <Partial<Config>>{
       }
     },
     plugins: []
-  }
+  },
+  safelist: ["font-heading", "font-carterOne", "font-outfit"]
 }

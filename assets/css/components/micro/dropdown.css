@@ -1,0 +1,19 @@
+.dropdown__wrapper {
+  @apply flex items-center justify-between bg-white shadow-small
+  p-1.5 rounded-xl cursor-pointer select-none;
+
+  .dropdown {
+    &__content {
+      @apply flex items-center gap-4;
+    }
+
+    &__icon {
+      @apply bg-primary w-9 h-9 flex justify-center items-center
+      text-white text-xl rounded-lg;
+    }
+
+    &__arrow {
+      @apply text-3xl flex items-center justify-center w-9 h-9;
+    }
+  }
+}

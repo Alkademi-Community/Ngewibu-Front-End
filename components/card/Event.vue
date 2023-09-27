@@ -32,12 +32,23 @@ defineProps({
     default: "sm"
   }
 })
+
+const sizes = {
+  card: {
+    sm: "p-4",
+    md: "px-6 py-5"
+  },
+  font: {
+    sm: "text-lg",
+    md: "text-2xl"
+  }
+}
 </script>
 
 <template>
-  <div :class="['event__card__container', size === 'sm' && 'p-4', size === 'md' && 'px-6 py-5', className]">
+  <div :class="['event__card__container', sizes.card[size] ?? null, className]">
     <div class="card__content">
-      <h3 :class="['card__title', size === 'sm' && 'text-lg', size === 'md' && 'text-2xl']">
+      <h3 :class="['card__title', sizes.font[size] ?? null]">
         {{ title }}
       </h3>
       <p class="card__description">
