@@ -22,13 +22,19 @@ const inputForm = [...InputFormLogin]
           </NuxtLink>
         </template>
       </FormBase>
+      <div class="button__wrapper">
+        <MicroLink path="/login" title="Sign In" />
+        <MicroLink path="/register" title="Sign Up" />
+      </div>
     </div>
-    <div class="h-screen w-full max-w-lg 2xl:max-w-xl">
-      <BgHero description="\">
+    <div class="relative h-screen w-full overflow-hidden max-w-lg 2xl:max-w-xl">
+      <BgHero description="“ More you explore, more you get the values “">
         <template #title>
-          <span> Explore <span>Together</span> </span>
+          <span> Explore <span class="title__span">Together</span> </span>
         </template>
       </BgHero>
+
+      <BgImage class-name="absolute bottom-0 -right-[200px]" />
     </div>
   </section>
 </template>
