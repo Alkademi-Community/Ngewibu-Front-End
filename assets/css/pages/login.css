@@ -11,5 +11,13 @@
     .forgot__password {
       @apply text-right font-medium mb-6;
     }
+
+    .button__wrapper {
+      @apply mt-4 flex justify-center space-x-4 items-center py-4 px-2;
+    }
+  }
+
+  .title__span {
+    @apply text-[#2D325A];
   }
 }

@@ -8,11 +8,11 @@ defineProps({
 </script>
 
 <template>
-  <div class="w-full h-full bg-gradient-to-t from-primary to-secondary p-12 font-medium">
+  <div class="w-full h-full bg-gradient-to-t from-primary to-secondary py-4 pl-9 font-medium space-y-1">
     <h1 class="text-4xl text-white">
       <slot name="title" />
     </h1>
-    <p>
+    <p class="font-light text-white italic">
       {{ description }}
     </p>
   </div>
