@@ -1,0 +1,15 @@
+.form__container {
+  @apply text-center;
+
+  .form__title {
+    @apply text-4xl font-bold;
+  }
+
+  .form__description {
+    @apply text-lg font-light mt-2.5;
+  }
+
+  .form__wrapper {
+    @apply mt-10;
+  }
+}

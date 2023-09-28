@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { DropdownMenu } from "~/utils/types/menu"
 
-const isAuthroized = ref(true)
+const isAuthroized = ref(false)
 const dropdownMenu: Ref<
   {
     name: string
@@ -33,7 +33,12 @@ const onMenuClick = async(value: DropdownMenu) => {
           <Icon name="ri:add-line" />
           Event
         </button>
-        <button v-if="!isAuthroized" type="button" class="action__button action__button--border">
+        <button
+          v-if="!isAuthroized"
+          type="button"
+          class="action__button action__button--border"
+          @click="$router.push('/login')"
+        >
           Login
         </button>
 
