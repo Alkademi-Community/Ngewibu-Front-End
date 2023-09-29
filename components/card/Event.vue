@@ -1,74 +1,82 @@
 <script lang="ts" setup>
-import { PropType } from "nuxt/dist/app/compat/capi"
-
 defineProps({
-  title: {
+  className: {
     type: String,
-    default: "Shiroyuki 2023"
-  },
-  description: {
-    type: String,
-    default: "Consectetur distinctio maiores suscipit minima eaque vel maxime, est nesciunt rerum quibusdam?"
+    default: ""
   },
   image: {
     type: String,
     default:
       "https://marketplace.canva.com/EAFBiag7Bos/1/0/1131w/canva-black-and-pink-glow-party-night-poster-oeRmI0EKb_I.jpg"
-  },
-  className: {
-    type: String,
-    default: ""
-  },
-  isSquare: {
-    type: Boolean,
-    default: false
-  },
-  isReadMore: {
-    type: Boolean,
-    deafult: false
-  },
-  size: {
-    type: String as PropType<"sm" | "md">,
-    default: "sm"
   }
 })
-
-const sizes = {
-  card: {
-    sm: "p-4",
-    md: "px-6 py-5"
-  },
-  font: {
-    sm: "text-lg",
-    md: "text-2xl"
-  }
-}
 </script>
 
 <template>
-  <div :class="['event__card__container', sizes.card[size] ?? null, className]">
-    <div class="card__content">
-      <h3 :class="['card__title', sizes.font[size] ?? null]">
-        {{ title }}
-      </h3>
-      <p class="card__description">
-        {{ description }}
-      </p>
-      <button v-if="isReadMore" type="button" class="action__button">
-        More Detail
-      </button>
-    </div>
-    <div v-if="image" :class="['card__image', isSquare && 'card__image--square']">
+  <div :class="['event__card__container', className]">
+    <div class="card__image__container">
       <NuxtImg
         :src="image"
-        :class="['card__image--size', isSquare && 'card__image--size--square']"
+        width="auto"
+        height="auto"
         format="webp"
         loading="lazy"
+        class="card__image--size"
       />
+    </div>
+    <div class="card__body__container card__info">
+      <p class="card__body--item">
+        <Icon name="ic:round-rocket" class="card__body--item--icon" />
+        <span>Friday, 09 September 2023</span>
+      </p>
+      <p class="card__body--item">
+        <Icon name="ri:lock-2-line" class="card__body--item--icon" />
+        <span>Friday, 09 September 2023</span>
+      </p>
+      <p class="card__body--item">
+        <Icon name="ri:map-pin-line" class="card__body--item--icon" />
+        <span>Offline</span>
+      </p>
+    </div>
+    <div class="card__body__container mb-6">
+      <h3 class="card__body--title">
+        OTAKU EXTALIA
+      </h3>
+      <p class="card__body--description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </p>
+    </div>
+    <div class="card__body__container card__action">
+      <MicroButton
+        type="button"
+        title="Read More"
+        font="sans"
+        rounded="lg"
+        color="secondary"
+        icon="ri:eye-line"
+        class="px-6 w-max"
+        icon-class="me-2.5 -ms-1.5"
+      />
+      <div class="flex gap-3">
+        <MicroButton
+          type="button"
+          icon="ri:thumb-up-line"
+          color="outline-secondary"
+          rounded="lg"
+          class="w-max px-2 text-xl leading-none"
+        />
+        <MicroButton
+          type="button"
+          icon="ri:message-2-line"
+          color="outline-secondary"
+          rounded="lg"
+          class="w-max px-2 text-xl leading-none"
+        />
+      </div>
     </div>
   </div>
 </template>
 
-<style lang="css">
+<style lang="css" scoped>
 @import url("~/assets/css/components/cards/event.css");
 </style>

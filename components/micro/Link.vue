@@ -37,7 +37,6 @@ defineProps({
   </NuxtLink>
 </template>
 
-
 <style scoped>
 @import url("~/assets/css/components/micro/link.css");
 </style>

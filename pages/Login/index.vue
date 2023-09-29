@@ -13,6 +13,7 @@ const inputForm = [...InputFormLogin]
         button-font="outfit"
         title-font="outfit"
         description-font="outfit"
+        button-text="Login"
       >
         <template #before-button>
           <NuxtLink to="/">
