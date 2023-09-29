@@ -1,0 +1,7 @@
+.link__container {
+  @apply font-semibold w-1/4 shadow-lg py-2 rounded-md text-center;
+}
+
+.active__link {
+  @apply bg-secondary text-white;
+}

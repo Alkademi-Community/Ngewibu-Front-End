@@ -56,7 +56,14 @@ module.exports = {
     ],
     "no-plusplus": "off",
     "no-param-reassign": "off",
-    "no-unused-vars": ["warn"],
+    "no-unused-vars": [
+      "warn",
+      {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+        caughtErrorsIgnorePattern: "^_"
+      }
+    ],
     "no-unused-expressions": ["off"],
     "space-before-function-paren": ["error", "never"],
     semi: "off",

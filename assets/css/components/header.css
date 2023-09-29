@@ -23,7 +23,8 @@
         }
 
         &--border {
-          @apply rounded-full border-2 border-secondary px-8 py-2;
+          @apply rounded-full border-2 border-secondary px-8 py-1.5
+          hover:bg-secondary transition-all duration-200 hover:text-white ease-in-out;
         }
       }
 

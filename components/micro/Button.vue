@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { PropType } from "nuxt/dist/app/compat/capi"
 
-type ColorType = "primary" | "secondary" | "gray" | "danger" | "warning" | "info" | "light" | "dark"
+import { ColorType, FontType, RoundedType } from "~/utils/types/theme"
 
 const props = defineProps({
   className: {
@@ -13,25 +13,29 @@ const props = defineProps({
     default: "Login"
   },
   font: {
-    type: String as PropType<"sans" | "heading" | "outfit" | "carterOne">,
+    type: String as PropType<FontType>,
     default: "sans"
   },
   color: {
     type: String as PropType<ColorType>,
     default: "primary"
   },
-  buttonType: {
+  type: {
     type: String as PropType<"button" | "submit" | "reset">,
     default: "button"
   },
   size: {
     type: String as PropType<"sm" | "md" | "lg">,
     default: "sm"
+  },
+  rounded: {
+    type: String as PropType<RoundedType>,
+    default: "none"
   }
 })
 
 const renderedFont = computed(() => `font-${props.font}`)
-const colors = {
+const colors: { [_key in ColorType]: string } = {
   primary: "bg-primary text-white",
   secondary: "bg-secondary text-white",
   gray: "",
@@ -43,16 +47,27 @@ const colors = {
 }
 const sizes = {
   sm: "py-1.5 font-medium",
-  md: "py-3 text-lg font-medium",
+  md: "py-3 text-xl font-medium",
   lg: ""
+}
+const roundeds: { [_key in RoundedType]: string } = {
+  none: "rounded-none",
+  sm: "rounded-sm",
+  base: "rounded",
+  md: "rounded-md",
+  lg: "rounded-lg",
+  xl: "rounded-xl",
+  "2xl": "rounded-2xl",
+  "3xl": "rounded-3xl",
+  full: "rounded-full"
 }
 defineEmits(["onClick"])
 </script>
 
 <template>
   <button
-    :type="buttonType"
-    :class="[, renderedFont, sizes[size] ?? null, colors[color] ?? null, className]"
+    :type="type"
+    :class="[renderedFont, sizes[size] ?? null, colors[color] ?? null, roundeds[rounded] ?? null, className]"
     @click="$emit('onClick')"
   >
     {{ title }}
