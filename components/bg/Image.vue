@@ -13,6 +13,6 @@ defineProps({
 
 <template>
   <div :class="className">
-    <img class="h-[550px] object-cover" :src="url" alt="">
+    <NuxtImg class="h-[550px] object-cover" :src="url" />
   </div>
 </template>
