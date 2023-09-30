@@ -26,9 +26,7 @@
       <div class="w-96 flex flex-col gap-5">
         <div class="flex gap-2.5 items-center">
           <Icon name="ri:flashlight-fill" class="text-secondary text-3xl" />
-          <p class="text-2xl font-heading font-semibold translate-y-0.5">
-            Upcoming Event
-          </p>
+          <p class="text-2xl font-heading font-semibold translate-y-0.5">Upcoming Event</p>
         </div>
         <CardEventVariant is-square />
         <CardEventVariant is-square />

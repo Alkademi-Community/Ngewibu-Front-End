@@ -21,7 +21,7 @@ defineProps({
     <div class="search__icon">
       <Icon name="ri:search-line" />
     </div>
-    <input :id="name" type="text" :name="name" class="search__input" :placeholder="placeholder">
+    <input :id="name" type="text" :name="name" class="search__input" :placeholder="placeholder" />
   </label>
 </template>
 

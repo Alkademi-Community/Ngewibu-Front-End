@@ -17,9 +17,7 @@ const inputForm = [...InputFormLogin]
       >
         <template #before-button>
           <NuxtLink to="/">
-            <p class="forgot__password">
-              Forgot Password?
-            </p>
+            <p class="forgot__password">Forgot Password?</p>
           </NuxtLink>
         </template>
       </FormBase>

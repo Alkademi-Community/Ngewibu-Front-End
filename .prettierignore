@@ -11,3 +11,8 @@ build
 public
 node_modules
 vercel.json
+*.log*
+.nuxt
+.cache
+.nitro
+.output

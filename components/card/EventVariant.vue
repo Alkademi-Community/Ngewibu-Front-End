@@ -54,9 +54,7 @@ const sizes = {
       <p class="card__description">
         {{ description }}
       </p>
-      <button v-if="isReadMore" type="button" class="action__button">
-        More Detail
-      </button>
+      <button v-if="isReadMore" type="button" class="action__button">More Detail</button>
     </div>
     <div v-if="image" :class="['card__image', isSquare && 'card__image--square']">
       <NuxtImg

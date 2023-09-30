@@ -65,10 +65,20 @@ module.exports = {
       }
     ],
     "no-unused-expressions": ["off"],
-    "space-before-function-paren": ["error", "never"],
+    "space-before-function-paren": ["off"],
     semi: "off",
     quotes: ["error", "double", { allowTemplateLiterals: true }],
     "vue/require-explicit-emits": "off",
-    "vue/multi-word-component-names": "off"
+    "vue/multi-word-component-names": "off",
+    "vue/singleline-html-element-content-newline": "off",
+    "vue/max-attributes-per-line": ["off"],
+    "vue/html-self-closing": [
+      "error",
+      {
+        html: {
+          void: "always"
+        }
+      }
+    ]
   }
 }
