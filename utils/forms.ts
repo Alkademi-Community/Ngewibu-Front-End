@@ -42,7 +42,7 @@ export const InputFormRegister: RegisterInterface[] = [
     label: "Username",
     placeholder: "Username",
     value: "",
-    disabled: false,
+    disabled: false
   },
   {
     name: "password",
@@ -50,6 +50,6 @@ export const InputFormRegister: RegisterInterface[] = [
     label: "Password",
     placeholder: "Password",
     value: "",
-    disabled: false,
+    disabled: false
   }
 ]

@@ -15,14 +15,7 @@ defineProps({
 <template>
   <div :class="['event__card__container', className]">
     <div class="card__image__container">
-      <NuxtImg
-        :src="image"
-        width="auto"
-        height="auto"
-        format="webp"
-        loading="lazy"
-        class="card__image--size"
-      />
+      <NuxtImg :src="image" width="auto" height="auto" format="webp" loading="lazy" class="card__image--size" />
     </div>
     <div class="card__body__container card__info">
       <p class="card__body--item">
@@ -39,12 +32,8 @@ defineProps({
       </p>
     </div>
     <div class="card__body__container mb-6">
-      <h3 class="card__body--title">
-        OTAKU EXTALIA
-      </h3>
-      <p class="card__body--description">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      </p>
+      <h3 class="card__body--title">OTAKU EXTALIA</h3>
+      <p class="card__body--description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
     </div>
     <div class="card__body__container card__action">
       <MicroButton

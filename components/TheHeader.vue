@@ -14,7 +14,7 @@ const dropdownMenu: Ref<
   { name: "Logout", value: "logout", icon: "ri:logout-circle-r-line" }
 ])
 
-const onMenuClick = async(value: DropdownMenu) => {
+const onMenuClick = async (value: DropdownMenu) => {
   if (value === "profile") {
     await navigateTo("/")
   }
@@ -24,9 +24,7 @@ const onMenuClick = async(value: DropdownMenu) => {
 <template>
   <header class="header__container">
     <section class="header__wrapper">
-      <NuxtLink to="/" class="header__brand">
-        NGE<span class="header__brand header__brand--blue">WIBU</span>
-      </NuxtLink>
+      <NuxtLink to="/" class="header__brand"> NGE<span class="header__brand header__brand--blue">WIBU</span> </NuxtLink>
 
       <nav class="header__navigation">
         <button type="button" class="action__button action__button--icon">
@@ -44,14 +42,7 @@ const onMenuClick = async(value: DropdownMenu) => {
 
         <HeadlessPopover v-if="isAuthroized" class="dropdown__menu relative">
           <HeadlessPopoverButton class="outline-none">
-            <NuxtImg
-              src="images/profile.png"
-              class=""
-              width="50"
-              height="50"
-              format="webp"
-              loading="lazy"
-            />
+            <NuxtImg src="images/profile.png" class="" width="50" height="50" format="webp" loading="lazy" />
           </HeadlessPopoverButton>
 
           <TransitionBottomFade>

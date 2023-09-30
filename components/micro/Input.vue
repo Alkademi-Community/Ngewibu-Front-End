@@ -38,7 +38,7 @@ defineEmits(["update:modelValue"])
       :value="modelValue"
       class="input__field"
       @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
-    >
+    />
   </label>
 </template>
 

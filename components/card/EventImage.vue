@@ -15,14 +15,7 @@ defineProps({
 <template>
   <div :class="['event__image__wrapper group', className]">
     <div class="card__image__container">
-      <NuxtImg
-        :src="image"
-        class="card__image--size"
-        height="auto"
-        format="webp"
-        width="auto"
-        loading="lazy"
-      />
+      <NuxtImg :src="image" class="card__image--size" height="auto" format="webp" width="auto" loading="lazy" />
       <div class="card__outer group-hover:bg-black/20 group-hover:backdrop-blur-sm" />
     </div>
     <div class="button__container group-hover:!opacity-100 group-hover:!translate-y-0">
