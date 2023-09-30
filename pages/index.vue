@@ -3,8 +3,8 @@
 <template>
   <div class="container py-8">
     <div class="flex gap-8 mb-8">
-      <CardEvent class-name="flex-1" size="md" title="Welcome to Ngewibu" image="" />
-      <CardEvent
+      <CardEventVariant class-name="flex-1" size="md" title="Welcome to Ngewibu" image="" />
+      <CardEventVariant
         class-name="flex-1"
         size="md"
         title="Shiroyuki 2023"
@@ -20,8 +20,8 @@
 
     <div class="flex gap-8 items-start">
       <div class="flex-1 flex gap-7 flex-wrap">
-        <CardEventVariant />
-        <CardEventVariant />
+        <CardEvent class="w-[calc(50%_-_14px)]" />
+        <CardEvent class="w-[calc(50%_-_14px)]" />
       </div>
       <div class="w-96 flex flex-col gap-5">
         <div class="flex gap-2.5 items-center">
@@ -30,9 +30,9 @@
             Upcoming Event
           </p>
         </div>
-        <CardEvent is-square />
-        <CardEvent is-square />
-        <CardEvent is-square />
+        <CardEventVariant is-square />
+        <CardEventVariant is-square />
+        <CardEventVariant is-square />
       </div>
     </div>
   </div>

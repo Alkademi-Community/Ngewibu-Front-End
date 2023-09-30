@@ -1,0 +1,19 @@
+.event__image__wrapper {
+  @apply relative select-none cursor-pointer w-[calc(50%_-_14px)] h-96 rounded-xl overflow-hidden;
+  .card__image {
+    &__container {
+      @apply overflow-hidden w-full h-full rounded-xl;
+      .card__outer {
+        @apply absolute inset-0 transition-all duration-200;
+      }
+    }
+    &--size {
+      @apply object-cover w-full;
+    }
+  }
+  .button__container {
+    @apply absolute flex justify-center gap-2.5 bg-secondary
+    items-center bottom-0 left-0 w-full py-2 text-white text-lg rounded-lg
+    opacity-0 transition-all duration-300 translate-y-6;
+  }
+}

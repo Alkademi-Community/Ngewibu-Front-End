@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { PropType } from "nuxt/dist/app/compat/capi"
 
-import { ColorType, FontType, RoundedType } from "~/utils/types/theme"
+import { ColorType, FontType, OutlineType, RoundedType } from "~/utils/types/theme"
 
 const props = defineProps({
   className: {
@@ -10,14 +10,22 @@ const props = defineProps({
   },
   title: {
     type: String,
-    default: "Login"
+    default: ""
+  },
+  icon: {
+    type: String,
+    default: ""
+  },
+  iconClass: {
+    type: String,
+    default: ""
   },
   font: {
     type: String as PropType<FontType>,
     default: "sans"
   },
   color: {
-    type: String as PropType<ColorType>,
+    type: String as PropType<ColorType | OutlineType>,
     default: "primary"
   },
   type: {
@@ -35,7 +43,7 @@ const props = defineProps({
 })
 
 const renderedFont = computed(() => `font-${props.font}`)
-const colors: { [_key in ColorType]: string } = {
+const colors: { [_key in ColorType]: string } & { [_key in OutlineType]: string } = {
   primary: "bg-primary text-white",
   secondary: "bg-secondary text-white",
   gray: "",
@@ -43,7 +51,15 @@ const colors: { [_key in ColorType]: string } = {
   info: "",
   light: "",
   dark: "",
-  warning: ""
+  warning: "",
+  "outline-primary": "border-2 border-primary text-primary",
+  "outline-secondary": "border-2 border-secondary text-secondary",
+  "outline-gray": "",
+  "outline-dark": "",
+  "outline-danger": "",
+  "outline-info": "",
+  "outline-light": "",
+  "outline-warning": ""
 }
 const sizes = {
   sm: "py-1.5 font-medium",
@@ -70,6 +86,9 @@ defineEmits(["onClick"])
     :class="[renderedFont, sizes[size] ?? null, colors[color] ?? null, roundeds[rounded] ?? null, className]"
     @click="$emit('onClick')"
   >
-    {{ title }}
+    <Icon v-if="icon" :name="icon" :class="iconClass" />
+    <span>
+      {{ title }}
+    </span>
   </button>
 </template>
