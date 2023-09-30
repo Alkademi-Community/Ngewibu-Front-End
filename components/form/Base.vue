@@ -32,6 +32,10 @@ const props = defineProps({
   buttonFont: {
     type: String as PropType<FontType>,
     default: "heading"
+  },
+  buttonText: {
+    type: String,
+    default: "Login"
   }
 })
 
@@ -62,7 +66,15 @@ const renderedDescFont = computed(() => `font-${props.descriptionFont}`)
 
       <slot name="before-button" />
 
-      <MicroButton type="submit" color="secondary" :font="buttonFont" size="md" rounded="xl" />
+      <MicroButton
+        :title="buttonText"
+        class-name="w-full uppercase"
+        type="submit"
+        color="secondary"
+        :font="buttonFont"
+        size="md"
+        rounded="xl"
+      />
     </form>
   </div>
 </template>
