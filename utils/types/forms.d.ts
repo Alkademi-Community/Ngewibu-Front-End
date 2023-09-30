@@ -15,7 +15,7 @@ export type LoginFields = {
 
 export type RegisterFields = {
   name: string
-  username: string
   email: string
+  username: string
   password: string
 }
