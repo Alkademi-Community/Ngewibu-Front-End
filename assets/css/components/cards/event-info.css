@@ -1,0 +1,22 @@
+.card__info__container {
+  @apply bg-white shadow-small rounded-xl p-6;
+  .card {
+    &__header {
+      @apply flex justify-between items-center mb-6;
+      &__title {
+        @apply text-xl font-semibold font-heading;
+      }
+    }
+    &__body {
+      @apply flex flex-col gap-4;
+    }
+    &__item {
+      &__heading {
+        @apply flex gap-2 items-center mb-1.5 font-semibold;
+      }
+      &__description {
+        @apply text-sm;
+      }
+    }
+  }
+}

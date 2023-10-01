@@ -1,0 +1,15 @@
+.card__container {
+  @apply relative w-full bg-white shadow-small rounded-xl p-8;
+  .card {
+    &__date {
+      @apply absolute left-6 -top-6 w-max px-8 font-semibold py-2;
+    }
+    &__title {
+      @apply text-xl font-heading font-semibold mb-5;
+
+      &--sub {
+        @apply text-lg font-sans font-normal mb-3;
+      }
+    }
+  }
+}

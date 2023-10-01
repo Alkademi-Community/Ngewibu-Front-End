@@ -1,8 +1,12 @@
 .header__container {
-  @apply container bg-white shadow-[0_4px_4px_rgba(0,0,0,0.25)] rounded-b-xl sticky top-0 z-[999];
+  @apply container bg-white shadow-[0_4px_4px_rgba(0,0,0,0.25)] rounded-b-xl sticky top-0 z-[999]
+  before:absolute before:h-[125%] before:w-10 before:-left-2 before:bottom-0.5 before:bg-white
+  before:rounded-xl before:-rotate-12 before:shadow-[-2px_-2px_4px_0_rgba(0,0,0,0.25)]
+  after:absolute after:h-[125%] after:w-10 after:-right-2 after:bottom-0.5 after:bg-white
+  after:rounded-xl after:rotate-12 after:shadow-[2px_-2px_4px_0_rgba(0,0,0,0.25)];
 
   .header__wrapper {
-    @apply flex justify-between items-center py-3;
+    @apply flex justify-between items-center py-3 px-6;
 
     .header__brand {
       @apply font-carterOne text-2xl;
