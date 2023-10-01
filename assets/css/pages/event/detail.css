@@ -1,0 +1,35 @@
+.event__detail__container {
+  @apply container py-8;
+  .button__action {
+    &--back {
+      @apply px-8 flex items-center gap-1.5 w-max;
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 12% 100%);
+    }
+  }
+
+  .event {
+    &__banner {
+      @apply w-full aspect-[5/1] overflow-hidden mt-10;
+    }
+
+    &__content {
+      &__wrapper {
+        @apply flex gap-10 items-start;
+      }
+      &--aside {
+        @apply max-w-[350px] sticky top-24;
+        .button__action {
+          @apply flex items-center gap-2.5 justify-center;
+        }
+      }
+    }
+
+    &__qrcode {
+      @apply bg-white shadow-small rounded-xl p-6 mb-5;
+    }
+
+    &__info {
+      @apply mb-5;
+    }
+  }
+}

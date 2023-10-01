@@ -1,0 +1,17 @@
+.form__container {
+  @apply flex gap-4 bg-white shadow-small mb-6 items-center rounded-xl px-6 py-4;
+  .form {
+    &__profile {
+      @apply w-12 rounded-full overflow-hidden;
+    }
+    &__wrapper {
+      @apply w-full block relative;
+      .button__action {
+        @apply absolute top-[7px] right-2 w-max px-1.5 py-0.5;
+      }
+    }
+    &__field {
+      @apply w-full border border-gray-dark rounded-xl outline-none py-2 px-3;
+    }
+  }
+}

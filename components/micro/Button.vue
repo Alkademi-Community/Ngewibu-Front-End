@@ -52,6 +52,8 @@ const colors: { [_key in ColorType]: string } & { [_key in OutlineType]: string 
   light: "",
   dark: "",
   warning: "",
+  black: "",
+  white: "",
   "outline-primary": "border-2 border-primary text-primary",
   "outline-secondary": "border-2 border-secondary text-secondary",
   "outline-gray": "",
@@ -59,11 +61,13 @@ const colors: { [_key in ColorType]: string } & { [_key in OutlineType]: string 
   "outline-danger": "",
   "outline-info": "",
   "outline-light": "",
-  "outline-warning": ""
+  "outline-warning": "",
+  "outline-black": "",
+  "outline-white": ""
 }
 const sizes = {
   sm: "py-1.5 font-medium",
-  md: "py-3 text-xl font-medium",
+  md: "py-2 text-lg font-medium",
   lg: ""
 }
 const roundeds: { [_key in RoundedType]: string } = {

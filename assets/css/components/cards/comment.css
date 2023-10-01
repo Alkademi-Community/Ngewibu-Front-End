@@ -1,0 +1,28 @@
+.comment__container {
+  @apply bg-white shadow-small rounded-xl p-6;
+  .comment {
+    &__header {
+      @apply flex justify-between items-center mb-4;
+      &__profile {
+        @apply flex gap-3 items-center;
+
+        .profile {
+          &__image {
+            @apply w-12 h-12 overflow-hidden rounded-full;
+          }
+          &__info {
+            &--time {
+              @apply text-gray-light text-xs;
+            }
+          }
+        }
+      }
+      &__button {
+        @apply w-max px-4 flex items-center gap-1 font-heading font-semibold;
+      }
+    }
+    &__body {
+      @apply font-heading font-light;
+    }
+  }
+}
