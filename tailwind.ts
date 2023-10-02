@@ -24,6 +24,7 @@ export default <Partial<Config>>{
         primary: "#87CEEB",
         secondary: "#70ACC4",
         black: "#333333",
+        shakespeare: "#519ab7",
         white: {
           DEFAULT: "#F9F9F9",
           soft: "#F7F7F7"
