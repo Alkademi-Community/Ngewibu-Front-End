@@ -1,15 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-(yarn lint:js && npm run lint:prettier) ||
+(yarn lint:js && yarn lint:prettier) ||
 (
     echo "🔨❌ You have a problem in your code. Check linter 🔨❌
           Run yarn lint or yarn lintfix, add changes and try commit again.";
-    false;
-)
-
-yarn build ||
-(
-    echo "🔨❌ Your build failed, view the error above 🔨❌";
     false;
 )
