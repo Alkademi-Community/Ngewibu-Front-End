@@ -69,7 +69,7 @@ const renderedDescFont = computed(() => `font-${props.descriptionFont}`)
       <MicroButton
         type="submit"
         :title="buttonText"
-        class-name="w-full uppercase"
+        class-name="w-full uppercase hover:bg-shakespeare"
         color="secondary"
         :font="buttonFont"
         size="md"

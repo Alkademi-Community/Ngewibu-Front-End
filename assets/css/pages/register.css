@@ -1,19 +1,23 @@
 .register__wrapper {
-  @apply flex h-screen items-center bg-white-soft;
+  @apply flex h-screen items-center bg-slate-200;
 
-  .register__form {
-    @apply flex-1 p-6;
+  .register__container {
+    @apply container flex h-5/6 items-center bg-white-soft px-0 justify-between shadow-md;
 
-    &__container {
-      @apply max-w-md mx-auto 2xl:max-w-xl;
+    .register__form {
+      @apply flex-1 p-6 mx-12;
+
+      &__container {
+        @apply max-w-md mx-auto 2xl:max-w-xl;
+      }
+
+      .button__wrapper {
+        @apply mt-2 flex justify-center space-x-4 items-center py-4 px-2;
+      }
     }
 
-    .button__wrapper {
-      @apply mt-2 flex justify-center space-x-4 items-center py-4 px-2;
+    .title__span {
+      @apply text-[#2D325A];
     }
-  }
-
-  .title__span {
-    @apply text-[#2D325A];
   }
 }
