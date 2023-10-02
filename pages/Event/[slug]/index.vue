@@ -34,6 +34,7 @@ const eventData: EventInfoInterface[] = [
       class="button__action--back"
       icon-class="text-xl"
       color="secondary"
+      @on-click="$router.go(-1)"
     />
 
     <div class="event__banner">

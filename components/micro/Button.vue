@@ -44,8 +44,8 @@ const props = defineProps({
 
 const renderedFont = computed(() => `font-${props.font}`)
 const colors: { [_key in ColorType]: string } & { [_key in OutlineType]: string } = {
-  primary: "bg-primary text-white",
-  secondary: "bg-secondary text-white",
+  primary: "bg-primary text-white hover:bg-shakespeare",
+  secondary: "bg-secondary text-white hover:bg-shakespeare",
   gray: "",
   danger: "",
   info: "",
@@ -54,8 +54,9 @@ const colors: { [_key in ColorType]: string } & { [_key in OutlineType]: string 
   warning: "",
   black: "",
   white: "",
-  "outline-primary": "border-2 border-primary text-primary",
-  "outline-secondary": "border-2 border-secondary text-secondary",
+  "outline-primary": "border-2 border-primary text-primary hover:bg-shakespeare",
+  "outline-secondary":
+    "border-2 border-secondary text-secondary hover:bg-shakespeare hover:text-white hover:border-shakespeare",
   "outline-gray": "",
   "outline-dark": "",
   "outline-danger": "",
@@ -87,7 +88,14 @@ defineEmits(["onClick"])
 <template>
   <button
     :type="type"
-    :class="[renderedFont, sizes[size] ?? null, colors[color] ?? null, roundeds[rounded] ?? null, className]"
+    :class="[
+      renderedFont,
+      sizes[size] ?? null,
+      colors[color] ?? null,
+      roundeds[rounded] ?? null,
+      'button__container',
+      className
+    ]"
     @click="$emit('onClick')"
   >
     <Icon v-if="icon" :name="icon" :class="iconClass" />
@@ -96,3 +104,9 @@ defineEmits(["onClick"])
     </span>
   </button>
 </template>
+
+<style lang="postcss" scoped>
+.button__container {
+  @apply transition-all duration-200;
+}
+</style>

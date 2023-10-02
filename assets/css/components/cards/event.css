@@ -18,10 +18,13 @@
         }
         &.card__action {
           @apply flex justify-between;
+          .button__action {
+            @apply px-6 w-max hover:bg-shakespeare transition-all duration-200;
+          }
         }
       }
       &--title {
-        @apply text-xl font-heading font-semibold mb-2;
+        @apply text-xl font-heading font-semibold mb-2 cursor-pointer select-none;
       }
       &--description {
         @apply text-sm font-light;
