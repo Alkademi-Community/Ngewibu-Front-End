@@ -32,7 +32,7 @@ defineProps({
       </p>
     </div>
     <div class="card__body__container mb-6">
-      <h3 class="card__body--title">OTAKU EXTALIA</h3>
+      <h3 class="card__body--title" @click="$router.push('/event/event-1')">OTAKU EXTALIA</h3>
       <p class="card__body--description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
     </div>
     <div class="card__body__container card__action">
@@ -43,8 +43,9 @@ defineProps({
         rounded="lg"
         color="secondary"
         icon="ri:eye-line"
-        class="px-6 w-max"
+        class="button__action"
         icon-class="me-2.5 -ms-1.5"
+        @on-click="$router.push('/event/event-1')"
       />
       <div class="flex gap-3">
         <MicroButton
