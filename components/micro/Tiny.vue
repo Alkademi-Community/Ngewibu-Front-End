@@ -4,7 +4,6 @@ import Editor from "@tinymce/tinymce-vue"
 
 <template>
   <main id="sample">
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
     <Editor
       api-key="no-api-key"
       :init="{
