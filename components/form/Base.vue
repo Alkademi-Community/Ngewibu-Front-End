@@ -61,6 +61,7 @@ const renderedDescFont = computed(() => `font-${props.descriptionFont}`)
         :name="input.name"
         :type="input.type"
         :placeholder="input.placeholder"
+        input-style="variant"
         class-name="mb-4"
       />
 

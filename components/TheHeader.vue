@@ -27,7 +27,7 @@ const onMenuClick = async (value: DropdownMenu) => {
       <NuxtLink to="/" class="header__brand"> NGE<span class="header__brand header__brand--blue">WIBU</span> </NuxtLink>
 
       <nav class="header__navigation">
-        <button type="button" class="action__button action__button--icon">
+        <button type="button" class="action__button action__button--icon" @click="$router.push('/event/create')">
           <Icon name="ri:add-line" />
           Event
         </button>

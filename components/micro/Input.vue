@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-defineProps({
+import { PropType } from "nuxt/dist/app/compat/capi"
+
+const props = defineProps({
   id: {
     type: String,
     default: ""
@@ -9,6 +11,10 @@ defineProps({
     default: ""
   },
   name: {
+    type: String,
+    default: ""
+  },
+  label: {
     type: String,
     default: ""
   },
@@ -23,20 +29,27 @@ defineProps({
   className: {
     type: String,
     default: ""
+  },
+  inputStyle: {
+    type: String as PropType<"base" | "variant">,
+    default: "base"
   }
 })
 defineEmits(["update:modelValue"])
+
+const style = computed(() => `input__field--${props.inputStyle}`)
 </script>
 
 <template>
   <label :for="name" :class="['input__wrapper', className]">
+    <span v-if="inputStyle === 'base'" class="input__label">{{ label }}</span>
     <input
       :id="id"
       :type="type"
       :name="name"
       :placeholder="placeholder"
       :value="modelValue"
-      class="input__field"
+      :class="style"
       @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
     />
   </label>
@@ -46,9 +59,18 @@ defineEmits(["update:modelValue"])
 .input__wrapper {
   @apply block;
 
+  .input__label {
+    @apply mb-2.5 block;
+  }
   .input__field {
-    @apply outline-none w-full bg-gray-soft px-6 py-4
-    shadow-[0_2px_1px_0_rgba(0,0,0,0.25)] rounded-xl;
+    &--base {
+      @apply outline-none w-full bg-white px-5 py-3
+      shadow-[0_0_2px_0_rgba(0,0,0,0.25)] rounded-xl;
+    }
+    &--variant {
+      @apply outline-none w-full bg-gray-soft px-6 py-4
+      shadow-[0_2px_1px_0_rgba(0,0,0,0.25)] rounded-xl;
+    }
   }
 }
 </style>
