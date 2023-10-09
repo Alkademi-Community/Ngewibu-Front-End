@@ -11,28 +11,16 @@ defineProps({
   title: {
     type: String,
     default: "Login"
+  },
+  exactActiv: {
+    type: String,
+    default: "active__link"
   }
 })
-
-// const active: Ref<boolean> = ref(false)
-
-// const isRouterActive = computed(() => {
-//   const route = useRoute()
-//   switch (route.path) {
-//     case "/register":
-//       active.value = !active.value
-//       break
-//     case "/login":
-//       active.value = !active.value
-//       break
-//     default:
-//       return false
-//   }
-// })
 </script>
 
 <template>
-  <NuxtLink :class="[className]" exact-active-class="active__link" :to="path">
+  <NuxtLink :class="[className]" :exact-active-class="exactActiv" :to="path">
     {{ title }}
   </NuxtLink>
 </template>

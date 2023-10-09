@@ -1,0 +1,31 @@
+.overview__container {
+  @apply container h-screen flex flex-col justify-between;
+
+  .header__logo {
+    @apply font-carterOne text-2xl;
+
+    &--blue {
+      @apply text-primary;
+    }
+  }
+
+  .text__content {
+    @apply text-2xl text-[#0f0f0f] font-semibold text-center;
+
+    &--blue {
+      @apply text-primary;
+    }
+  }
+
+  .link__button {
+    @apply font-medium px-4 py-3 rounded-full border border-secondary;
+  }
+
+  /* .link__button__active {
+    @apply font-medium px-4 py-3 rounded-full text-white;
+  } */
+
+  .image__pict {
+    @apply object-cover h-[280px];
+  }
+}
