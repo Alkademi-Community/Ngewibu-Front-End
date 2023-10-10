@@ -35,5 +35,5 @@ const inputFormRegister = [...InputFormRegister]
 </template>
 
 <style scoped>
-@import url("~/assets/css/pages/register.css");
+@import url("~/assets/css/pages/register/register.css");
 </style>
