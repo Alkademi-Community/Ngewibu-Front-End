@@ -19,6 +19,6 @@
   }
 
   html {
-    @apply text-black bg-gray-soft;
+    @apply text-black bg-slate-200;
   }
 }
